@@ -1,0 +1,60 @@
+@font-face {
+    font-family:"Shrikhand", sans-serif;
+    src: url('Shrikhand-Rgular.ttf');
+}
+@font-face {
+    font-family:"Roboto", sans-serif;
+    src: url('Roboto-Regular.ttf');
+}
+$color-primary : white;
+body{
+    background-color:$color-primary;
+    white-space: normal;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.header {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.header_logo {
+    text-align: center;
+    width: 15rem;
+}
+.localisation{
+    background-color: darken($color:$color-primary, $amount:10%);
+    display: flex;
+    text-align: center;
+    margin: none;
+    width: 15rem;
+}
+.localisation_text {
+    margin: none;
+    font-weight: 600;
+}
+.reservation {
+    background-color: darken($color:$color-primary, $amount:5%);
+    text-align: center;
+}
+.reservation_titre {
+    font-size: large;
+    font-weight: 900;
+}
+.reservation_sous_titre {
+    font-size: medium;
+    font-weight: thin;
+}
+.btn_reservation {
+    color: darkorchid;
+}
+.fonctionnement {
+    background-color: $color-primary;
+}
+.fonctionnement_titre {
+    font-size: large;
+    font-weight: 900;
+}
+
