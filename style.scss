@@ -48,7 +48,8 @@ a{
     font-weight: thin;
 }
 .btn_reservation {
-    color: darkorchid;
+    background-color: darkorchid;
+    color: $color-primary;
 }
 .fonctionnement {
     background-color: $color-primary;
@@ -58,3 +59,13 @@ a{
     font-weight: 900;
 }
 
+ li{
+    display:flex; 
+}
+.btn_fonctionnement{
+     background-color: darken($color:$color-primary, $amount:5%);
+     font-size:1rem;
+     cursor: pointer;
+     padding-bottom:1rem;
+     padding-left:1rem;
+}

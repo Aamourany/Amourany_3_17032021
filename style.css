@@ -64,7 +64,8 @@ a {
 }
 
 .btn_reservation {
-  color: darkorchid;
+  background-color: darkorchid;
+  color: white;
 }
 
 .fonctionnement {
@@ -74,5 +75,19 @@ a {
 .fonctionnement_titre {
   font-size: large;
   font-weight: 900;
+}
+
+li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn_fonctionnement {
+  background-color: #f2f2f2;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
