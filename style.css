@@ -145,7 +145,7 @@ header {
           justify-content: center;
   height: 50px;
   text-align: center;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #FF79DA), color-stop(95%, #9356DC));
   background: linear-gradient(#FF79DA 10%, #9356DC 95%);
   color: #F6F6F6;
@@ -191,26 +191,11 @@ header {
   .fonctionnement_titre, .restaurants_titre {
     width: 336px;
   }
-  .choix {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-bottom: 24px;
-  }
-  .numero_cercle {
-    left: -14px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
+  .footer_menu {
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 24px;
-    height: 24px;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -224,27 +209,48 @@ header {
           flex-direction: column;
 }
 
-.choix {
+.choix, .choix_rose {
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background-color: #F6F6F6;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
   width: 336px;
   height: 74px;
   margin: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 24px;
 }
 
-.choix i {
+.choix i, .choix_rose i {
   padding: 0 15px 0 30px;
+}
+
+.choix_rose {
+  background-color: #f2eafb;
 }
 
 .numero_cercle {
   position: absolute;
+  left: -14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 24px;
+  height: 24px;
 }
 
 .cercle {
@@ -275,5 +281,202 @@ header {
 
 .icon_fonctionnement {
   font-size: 1rem;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 20px 40px 20px;
+  background-color: #F6F6F6;
+}
+
+.restaurants_bloc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 20%;
+}
+
+.restaurant_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 336px;
+  margin: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.restaurants_infos {
+  position: relative;
+  margin: 15px;
+}
+
+.restaurants_text {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.restaurants_lieu {
+  font-weight: 400;
+}
+
+.like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 20%;
+  height: 100%;
+}
+
+.empty_like {
+  font-size: 24px;
+  position: absolute;
+  z-index: 2;
+  color: #000;
+}
+
+.empty_like:hover {
+  background: #FF79DA;
+}
+
+.full_like {
+  font-size: 24px;
+  position: absolute;
+  z-index: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.badge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 80px;
+  height: 30px;
+  background-color: #99E2D0;
+  color: #217460;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px 25px 35px 25px;
+  color: white;
+  background-color: #2e2b2b;
+}
+
+footer a {
+  color: white;
+}
+
+.footer_logo {
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 1400px;
+  color: white;
+}
+
+.footer_logo img {
+  width: auto;
+  height: 25px;
+}
+
+.footer_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  line-height: 27px;
+}
+
+.footer_menu i {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+@media all and (min-width: 751px) {
+  .footer_ligne {
+    padding: 3rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.precedent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  font-size: 1.5rem;
+  width: 30px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  margin: 15px;
+}
+
+.header_container img {
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
