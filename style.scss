@@ -103,6 +103,7 @@ header {
 .btn_reservation {
     @include header(220px);
     height: 50px;
+    width: fit-content;
     text-align: center;
     border-radius: 1rem;
     background:linear-gradient( #FF79DA 10%, #9356DC 95%);
@@ -301,6 +302,7 @@ footer{
     justify-content: space-between;
 }
 }
+/* Page restaurant html */
 .precedent{
     @include header(35px);
     left: 0;
@@ -313,4 +315,121 @@ footer{
 }
 .header_container img{
     height: 30px;
+}
+@media all and (max-width:750px){
+.restaurants_photo{
+max-height: 270px;
+}
+.menu{
+    padding: 35px 20px;
+}
+.en_tete_menu h1{
+    font-size: 1rem;
+}
+}
+@media all and (min-width:751px){
+    .restaurants_photo{
+        max-height: 400px;
+        } 
+    .menu{
+        padding: 40px 30px;
+    }
+    .en_tete_menu h1{
+        font-size: 2rem;
+    }
+}
+.menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #F6F6F6;
+}
+.en_tete_menu{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    & h1{
+        font-weight: 400;
+        margin:0;
+        text-align: left;
+    }
+    & i{
+        @include header(auto);
+        margin: 0 15px;
+        padding: 20px;
+    }
+}
+.like_menu{
+    text-align:right;
+    right:0;
+}
+.plats_container{
+    margin-bottom: 30px;
+    & h1{
+        margin-left: 10px;
+    }
+}
+.line{
+    margin-left:10px;
+    width: 40px;
+    height: 3px;
+    margin: 5px 0 12px 0;
+    background-color: $color-third;
+}
+.plats{
+    position: relative;
+    top: 45px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color:white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
+    &:hover{
+        .plat_valide{
+            width: 60px;
+            height:100%;
+            background-color:$color-third;
+            & i{
+                @include header(100%);
+                font-size:1rem;
+                position: absolute;
+                top: 0;
+                width:100%;
+                height:100%;
+                color: white;
+            }
+        }
+    }
+}
+.plats_noms{
+    font-size:1.1rem;
+    font-weight:500;
+    line-height: 1.8rem;
+    width:calc(100%-60px);
+}
+.plats_lignes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & p{
+        font-size: 1rem;
+        font-weight: 300;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+.prix{
+font-size: 1rem;
+font-weight: bold;
+}
+.valide{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height:100%;
 }
