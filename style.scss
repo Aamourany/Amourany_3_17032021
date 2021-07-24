@@ -200,8 +200,12 @@ header {
     display: flex;
     flex-flow: wrap;
     justify-content: flex-start;
-    margin-left: 20%;
 }
+@media all and (min-width:650px){
+    .restaurants_bloc{
+        margin-left: 20%;
+    }
+    }
 .restaurant_cards{
     display: flex;
     overflow: hidden;
@@ -238,18 +242,17 @@ header {
 .empty_like{
     font-size: 24px;
     position: absolute;
-    z-index:2 ;
+    z-index:1 ;
     color: #000;
     &:hover{
-        background: $color-secondary;
+        .full_like{
+            font-size: 24px;
+            position: absolute;
+            z-index:2; 
+            transform: scale(0);
+             color: $color-secondary;
+        }
     }
-}
-.full_like{
-    font-size: 24px;
-    position: absolute;
-    z-index:1; 
-    transform: scale(0);
-    
 }
 .badge{
     @include header(80px);
@@ -316,8 +319,8 @@ footer{
 .header_container img{
     height: 30px;
 }
-@media all and (max-width:750px){
-.restaurants_photo{
+@media screen and (max-width:750px){
+.restaurant_photo{
 max-height: 270px;
 }
 .menu{
@@ -327,8 +330,8 @@ max-height: 270px;
     font-size: 1rem;
 }
 }
-@media all and (min-width:751px){
-    .restaurants_photo{
+@media screen and (min-width:751px){
+    .restaurant_photo{
         max-height: 400px;
         } 
     .menu{
@@ -344,6 +347,7 @@ max-height: 270px;
     flex-direction: column;
     border-radius: 2rem 2rem 0 0;
     background-color: #F6F6F6;
+    transform: translateY(-50px);
 }
 .en_tete_menu{
     position: relative;
@@ -388,20 +392,31 @@ max-height: 270px;
     border-radius: 1rem;
     background-color:white;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
+    animation-delay: 0.177ms;
+    animation: cubic-bezier(0,0,0,1) forwards;
     &:hover{
+        .valide{
+            background-color:$color-third;
+            @include header(4rem);
+            transition-duration:0.5s;
+        }
         .plat_valide{
-            width: 60px;
+            width: 10rem;
             height:100%;
             background-color:$color-third;
-            & i{
+        }
+            & .icon_resto{
                 @include header(100%);
-                font-size:1rem;
+                font-size:2rem;
                 position: absolute;
-                top: 0;
-                width:100%;
-                height:100%;
-                color: white;
-            }
+                right:5rem;
+                width:3rem;
+                height:3rem;
+                color:white;
+                border-radius:100%;
+                transition-duration:0.5s;
+                transform:rotate(360deg);
+           
         }
     }
 }
@@ -415,21 +430,25 @@ max-height: 270px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    transition: width 500ms, text-overflow 500ms;
     & p{
         font-size: 1rem;
         font-weight: 300;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        margin: 25px 1px 0 1px;
     }
 }
 .prix{
 font-size: 1rem;
 font-weight: bold;
+transition:margin-right 500ms;
 }
 .valide{
     position: absolute;
     top: 0;
     right: 0;
     height:100%;
+    transform: translateX(60px);
 }
