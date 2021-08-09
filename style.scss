@@ -75,7 +75,7 @@ header {
     font-size: 1rem;
 }
 .localisation_text {
-    margin: none;
+    margin:0;
     font-weight: 600;
 }
 .icon_localisation{
@@ -393,12 +393,16 @@ max-height: 270px;
     background-color:white;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
     animation-delay: 0.177ms;
-    animation: cubic-bezier(0,0,0,1) forwards;
+    animation: cubic-bezier(0.17,0.37,0.9,0.43) forwards;
     &:hover{
         .valide{
             background-color:$color-third;
+            transform-origin: right 50%;
+            transition:transform 1000ms cubic-bezier(0.17,0.37,0.9,0.43);
             @include header(4rem);
-            transition-duration:0.5s;
+            transition-duration: 1000ms;
+            transition-duration: 1000ms;
+            transition-property: margin-right;
         }
         .plat_valide{
             width: 10rem;
@@ -409,6 +413,7 @@ max-height: 270px;
                 @include header(100%);
                 font-size:2rem;
                 position: absolute;
+                opacity: 1;
                 right:5rem;
                 width:3rem;
                 height:3rem;
@@ -418,13 +423,24 @@ max-height: 270px;
                 transform:rotate(360deg);
            
         }
+        .prix{
+            margin-right:6rem;
+        }
     }
 }
 .plats_noms{
     font-size:1.1rem;
     font-weight:500;
     line-height: 1.8rem;
-    width:calc(100%-60px);
+    width:calc(100%);
+}
+.plat_valide{
+    width:0px;
+    transition: all 1s;
+}
+.icon_resto{
+    transition-delay: 00.5s;
+    opacity:0;
 }
 .plats_lignes{
     display: flex;
@@ -443,7 +459,7 @@ max-height: 270px;
 .prix{
 font-size: 1rem;
 font-weight: bold;
-transition:margin-right 500ms;
+transition:all 1s,
 }
 .valide{
     position: absolute;
