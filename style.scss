@@ -19,6 +19,50 @@ $color-third : #99E2D0;
     display :flex;
     align-items: center;
 }
+.loader_container{
+    @include header(100%);
+    position: fixed;
+    z-index:20;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    margin:0;
+    padding:0;
+    animation: loading 3s ease-in-out normal forwards ;
+    opacity:1;
+    background: grey;
+& .logo_loader{
+    width: auto;
+    margin-bottom: 20px;
+}
+}
+.loader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70px;
+}
+.loader_icon1{
+width: 15px;
+height: 20px;
+animation: loadericon 1s ease-in-out alternate-reverse infinite;
+animation-delay:0.5s;
+background: $color-primary;
+}
+.loader_icon2{
+    width: 15px;
+    height: 20px;
+    animation: loadericon 1s ease-in-out alternate-reverse infinite;
+    animation-delay:1s;
+    background: $color-secondary;
+}
+.loader_icon3{
+    width: 15px;
+    height: 20px;
+    animation: loadericon 1s ease-in-out alternate-reverse infinite;
+    animation-delay:1.5s;
+    background: $color-third;
+}
 body{
     background-color:$background-color-primary;
     white-space: normal;
