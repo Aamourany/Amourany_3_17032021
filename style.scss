@@ -311,7 +311,7 @@ button {
     transition: transform 300ms ease;
     color: #000;
     background:linear-gradient( #FF79DA 10%, #9356DC 95%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 .badge{
