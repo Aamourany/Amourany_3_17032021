@@ -31,12 +31,6 @@ img {
   width: 100%;
 }
 
-button {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
 .restaurants_img {
   position: relative;
   overflow: hidden;
@@ -133,7 +127,10 @@ header {
   text-align: center;
 }
 
-.btn_reservation {
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +159,7 @@ header {
   padding: 1rem;
 }
 
-.btn_reservation:hover {
+button:hover {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
   font-size: 1rem;
@@ -359,7 +356,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.5rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -369,19 +365,58 @@ header {
 }
 
 .empty_like {
-  font-size: 24px;
+  position: absolute;
+  z-index: 2;
+  font-size: 1.5rem;
+  color: #000;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.empty_like:hover {
   position: absolute;
   z-index: 1;
-  color: #000;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  -webkit-animation: step-start 300ms;
+          animation: step-start 300ms;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .empty_like:hover .full_like {
-  font-size: 24px;
   position: absolute;
   z-index: 2;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  color: #FF79DA;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.full_like {
+  position: absolute;
+  z-index: 1;
+  font-size: 1.5rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 1rem;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  color: #000;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #FF79DA), color-stop(95%, #9356DC));
+  background: linear-gradient(#FF79DA 10%, #9356DC 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .badge {
@@ -427,6 +462,10 @@ footer a {
   color: white;
 }
 
+footer p {
+  cursor: pointer;
+}
+
 .footer_logo {
   padding-bottom: 10px;
   width: 100%;
@@ -435,7 +474,7 @@ footer a {
 }
 
 .footer_logo img {
-  width: auto;
+  width: 50%;
   height: 25px;
 }
 
@@ -534,31 +573,28 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  letter-spacing: 0.08rem;
   margin-bottom: 30px;
 }
 
 .en_tete_menu h1 {
-  font-weight: 400;
+  font-weight: 900;
   margin: 0;
   text-align: left;
 }
 
 .en_tete_menu i {
+  margin: 0 15px;
+  padding: 20px;
+}
+
+.like_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 15px;
-  padding: 20px;
-}
-
-.like_menu {
-  text-align: right;
   right: 0;
 }
 
@@ -710,5 +746,19 @@ footer a {
   height: 100%;
   -webkit-transform: translateX(60px);
           transform: translateX(60px);
+}
+
+.btn_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0 0 0;
+}
+
+footer img {
+  width: 50%;
 }
 /*# sourceMappingURL=style.css.map */

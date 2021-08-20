@@ -38,11 +38,6 @@ h1{
 img{
     width:100%;
 }
-button{
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-}
 .restaurants_img{
     position: relative;
     overflow: hidden;
@@ -100,7 +95,10 @@ header {
     margin-bottom: 40px;
     text-align: center;
 }
-.btn_reservation {
+button {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
     @include header(220px);
     height: 50px;
     width: fit-content;
@@ -117,7 +115,6 @@ header {
     transform: scale(.97);
     font-size: 1rem;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
-    
     }
 }
 .fonctionnement {
@@ -231,7 +228,6 @@ header {
 }
 .like{
     @include header(20%);
-    font-size: 1.5rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -239,20 +235,40 @@ header {
     width: 20%;
     height: 100%;
 }
+
 .empty_like{
-    font-size: 24px;
     position: absolute;
-    z-index:1 ;
+    z-index:2 ;
+    font-size: 1.5rem;
     color: #000;
+    transform: scale(1);
+    transition: transform 300ms ease;
     &:hover{
+        position: absolute;
+        z-index:1;
+        transition: transform 300ms ease;
+        animation:step-start 300ms;
+        transform: scale(0);
         .full_like{
-            font-size: 24px;
+            
             position: absolute;
-            z-index:2; 
-            transform: scale(0);
-             color: $color-secondary;
+            z-index:2;
+            transform: scale(1);
+            transition: transform 300ms ease;
         }
     }
+}
+.full_like{
+    position: absolute;
+    z-index:1;
+    font-size: 1.5rem;
+    transform: scale(1);
+    width:1rem;
+    transition: transform 300ms ease;
+    color: #000;
+    background:linear-gradient( #FF79DA 10%, #9356DC 95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 .badge{
     @include header(80px);
@@ -277,6 +293,9 @@ footer{
     & a{
         color: white;
     }
+    & p{
+        cursor: pointer;
+    }
 }
 .footer_logo{
     padding-bottom: 10px;
@@ -284,7 +303,7 @@ footer{
     max-width:1400px;
     color:white;
     & img{
-        width: auto;
+        width:50%;
         height: 25px;
     }
 }
@@ -353,20 +372,20 @@ max-height: 270px;
     position: relative;
     display: flex;
     flex-direction: row;
+    letter-spacing:0.08rem;
     margin-bottom: 30px;
     & h1{
-        font-weight: 400;
+        font-weight: 900;
         margin:0;
         text-align: left;
     }
     & i{
-        @include header(auto);
         margin: 0 15px;
         padding: 20px;
     }
 }
 .like_menu{
-    text-align:right;
+    @include header-bis(100%);
     right:0;
 }
 .plats_container{
@@ -467,4 +486,14 @@ transition:all 1s,
     right: 0;
     height:100%;
     transform: translateX(60px);
+}
+.btn_container{
+    display: flex;
+    justify-content: center;
+    margin:50px 0 0 0;
+}
+footer{
+    & img{
+        width:50%;
+}
 }
