@@ -19,6 +19,16 @@ $color-third : #99E2D0;
     display :flex;
     align-items: center;
 }
+@keyframes loading {
+    0% {opacity: 1;}
+    99%{opacity:1;}
+    100%{ visibility: hidden;
+        opacity:0;}
+}
+@keyframes loadericon {
+    0%{opacity:0.3;}
+    100%{opacity:1;}
+}
 .loader_container{
     @include header(100%);
     position: fixed;
@@ -28,9 +38,9 @@ $color-third : #99E2D0;
     min-height: 100%;
     margin:0;
     padding:0;
-    animation: loading 3s ease-in-out normal forwards ;
+    animation:loading 3.5s ease-in-out normal forwards ;
     opacity:1;
-    background: grey;
+    background:#F6F6F6;
 & .logo_loader{
     width: auto;
     margin-bottom: 20px;
@@ -40,24 +50,24 @@ $color-third : #99E2D0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 70px;
+    width: 90px;
 }
 .loader_icon1{
-width: 15px;
+width: 25px;
 height: 20px;
 animation: loadericon 1s ease-in-out alternate-reverse infinite;
 animation-delay:0.5s;
 background: $color-primary;
 }
 .loader_icon2{
-    width: 15px;
+    width: 25px;
     height: 20px;
     animation: loadericon 1s ease-in-out alternate-reverse infinite;
     animation-delay:1s;
     background: $color-secondary;
 }
 .loader_icon3{
-    width: 15px;
+    width: 25px;
     height: 20px;
     animation: loadericon 1s ease-in-out alternate-reverse infinite;
     animation-delay:1.5s;
@@ -153,6 +163,7 @@ button {
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
     border-style: none;
     transform: scale(1);
+    cursor: pointer;
     transition: 0.2s all ease-in-out;
     padding:1rem;
     &:hover{
@@ -307,11 +318,10 @@ button {
     z-index:1;
     font-size: 1.5rem;
     transform: scale(1);
-    width:1rem;
     transition: transform 300ms ease;
     color: #000;
     background:linear-gradient( #FF79DA 10%, #9356DC 95%); 
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 .badge{
@@ -522,7 +532,10 @@ max-height: 270px;
 .prix{
 font-size: 1rem;
 font-weight: bold;
-transition:all 1s,
+transition:all 1s;
+& h3{
+    font-size: 1.5rem;
+}
 }
 .valide{
     position: absolute;
