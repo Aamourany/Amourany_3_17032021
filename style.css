@@ -52,6 +52,48 @@
   }
 }
 
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 .loader_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,11 +521,11 @@ button:hover {
   display: flex;
   width: 20%;
   height: 100%;
+  cursor: pointer;
 }
 
 .empty_like {
   position: absolute;
-  z-index: 2;
   font-size: 1.5rem;
   color: #000;
   -webkit-transform: scale(1);
@@ -495,8 +537,6 @@ button:hover {
 }
 
 .empty_like:hover {
-  position: absolute;
-  z-index: 1;
   -webkit-transition: -webkit-transform 300ms ease;
   transition: -webkit-transform 300ms ease;
   transition: transform 300ms ease;
@@ -508,8 +548,6 @@ button:hover {
 }
 
 .empty_like:hover .full_like {
-  position: absolute;
-  z-index: 2;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform 300ms ease;
@@ -520,10 +558,9 @@ button:hover {
 
 .full_like {
   position: absolute;
-  z-index: 1;
   font-size: 1.5rem;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: -webkit-transform 300ms ease;
   transition: -webkit-transform 300ms ease;
   transition: transform 300ms ease;
@@ -591,7 +628,6 @@ footer p {
 
 .footer_logo img {
   width: 50%;
-  height: 25px;
 }
 
 .footer_menu {
@@ -714,11 +750,11 @@ footer p {
   right: 0;
 }
 
-.plats_container {
+.container {
   margin-bottom: 30px;
 }
 
-.plats_container h1 {
+.container h1 {
   margin-left: 10px;
 }
 
@@ -739,12 +775,10 @@ footer p {
   cursor: pointer;
   border-radius: 1rem;
   background-color: white;
+  -webkit-animation: slide-in 600ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+          animation: slide-in 600ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-  -webkit-animation-delay: 0.177ms;
-          animation-delay: 0.177ms;
-  -webkit-animation: cubic-bezier(0.17, 0.37, 0.9, 0.43) forwards;
-          animation: cubic-bezier(0.17, 0.37, 0.9, 0.43) forwards;
 }
 
 .plats:hover .valide {
@@ -807,7 +841,7 @@ footer p {
 
 .plats_noms {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.8rem;
   width: calc(100%);
 }
@@ -848,6 +882,30 @@ footer p {
   margin: 25px 1px 0 1px;
 }
 
+@media screen and (max-width: 461px) {
+  .plats_noms {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 460px) and (max-width: 634px) {
+  .plats_noms {
+    font-size: 1.1rem;
+  }
+  .plats_lignes p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 635px) {
+  .plats_noms {
+    font-size: 1.7rem;
+  }
+  .plats_lignes p {
+    font-size: 1.5rem;
+  }
+}
+
 .prix {
   font-size: 1rem;
   font-weight: bold;
@@ -866,6 +924,10 @@ footer p {
   height: 100%;
   -webkit-transform: translateX(60px);
           transform: translateX(60px);
+}
+
+.plats_bloc {
+  margin-bottom: 5rem;
 }
 
 .btn_container {

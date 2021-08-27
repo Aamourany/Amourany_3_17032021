@@ -19,6 +19,12 @@ $color-third : #99E2D0;
     display :flex;
     align-items: center;
 }
+@mixin full-like ($width) {
+    .full_like{
+        transform: scale(1);
+        transition: transform 300ms ease;
+    }
+}
 @keyframes loading {
     0% {opacity: 1;}
     99%{opacity:1;}
@@ -29,6 +35,26 @@ $color-third : #99E2D0;
     0%{opacity:0.3;}
     100%{opacity:1;}
 }
+@keyframes slide-in {
+    0% {
+      -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+              transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
 .loader_container{
     @include header(100%);
     position: fixed;
@@ -289,35 +315,26 @@ button {
     display: flex;
     width: 20%;
     height: 100%;
+    cursor: pointer;
 }
 
 .empty_like{
     position: absolute;
-    z-index:2 ;
     font-size: 1.5rem;
     color: #000;
     transform: scale(1);
     transition: transform 300ms ease;
     &:hover{
-        position: absolute;
-        z-index:1;
+        @include full-like(auto);
         transition: transform 300ms ease;
         animation:step-start 300ms;
         transform: scale(0);
-        .full_like{
-            
-            position: absolute;
-            z-index:2;
-            transform: scale(1);
-            transition: transform 300ms ease;
-        }
     }
 }
 .full_like{
     position: absolute;
-    z-index:1;
     font-size: 1.5rem;
-    transform: scale(1);
+    transform: scale(0);
     transition: transform 300ms ease;
     color: #000;
     background:linear-gradient( #FF79DA 10%, #9356DC 95%); 
@@ -358,7 +375,6 @@ footer{
     color:white;
     & img{
         width:50%;
-        height: 25px;
     }
 }
 .footer_menu{
@@ -442,7 +458,7 @@ max-height: 270px;
     @include header-bis(100%);
     right:0;
 }
-.plats_container{
+.container{
     margin-bottom: 30px;
     & h1{
         margin-left: 10px;
@@ -464,9 +480,8 @@ max-height: 270px;
     cursor: pointer;
     border-radius: 1rem;
     background-color:white;
+    animation: slide-in 600ms cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
-    animation-delay: 0.177ms;
-    animation: cubic-bezier(0.17,0.37,0.9,0.43) forwards;
     &:hover{
         .valide{
             background-color:$color-third;
@@ -503,7 +518,7 @@ max-height: 270px;
 }
 .plats_noms{
     font-size:1.1rem;
-    font-weight:500;
+    font-weight:600;
     line-height: 1.8rem;
     width:calc(100%);
 }
@@ -529,6 +544,27 @@ max-height: 270px;
         margin: 25px 1px 0 1px;
     }
 }
+@media screen and (max-width:461px){
+    .plats_noms{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:460px) and (max-width:634px){
+    .plats_noms{
+        font-size: 1.1rem;
+    }
+    .plats_lignes p{
+        font-size:1.5rem;
+    }
+}
+@media screen and (min-width:635px){
+    .plats_noms{
+        font-size:1.7rem;
+    }
+    .plats_lignes p{
+        font-size:1.5rem;
+    }
+}
 .prix{
 font-size: 1rem;
 font-weight: bold;
@@ -543,6 +579,9 @@ transition:all 1s;
     right: 0;
     height:100%;
     transform: translateX(60px);
+}
+.plats_bloc{
+    margin-bottom: 5rem;
 }
 .btn_container{
     display: flex;
