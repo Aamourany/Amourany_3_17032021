@@ -510,54 +510,6 @@ button:hover {
   cursor: pointer;
 }
 
-.empty_like {
-  position: absolute;
-  font-size: 1.5rem;
-  color: #000;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
-}
-
-.empty_like:hover {
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
-  -webkit-animation: step-start 300ms;
-          animation: step-start 300ms;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-.empty_like:hover .full_like {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
-}
-
-.full_like {
-  position: absolute;
-  font-size: 1.5rem;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
-  color: #000;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #FF79DA), color-stop(95%, #9356DC));
-  background: linear-gradient(#FF79DA 10%, #9356DC 95%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .badge {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -734,6 +686,42 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   right: 0;
+}
+
+.like_menu .empty_like {
+  position: absolute;
+  font-size: 1.4em;
+  font-weight: normal;
+  fill: transparent;
+  opacity: 1;
+}
+
+.like_menu .full_like {
+  position: absolute;
+  font-size: 1.4em;
+  font-weight: bold;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.like_menu:hover .empty_like {
+  opacity: 0;
+}
+
+.like_menu:hover .full_like {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
 }
 
 .container {
