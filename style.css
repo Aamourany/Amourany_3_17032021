@@ -368,14 +368,14 @@ button:hover {
           flex-direction: column;
 }
 
-.choix, .choix_rose {
+.choix {
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  cursor: pointer;
   border-radius: 1rem;
-  background-color: #F6F6F6;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
   width: 336px;
@@ -390,12 +390,14 @@ button:hover {
   margin-bottom: 24px;
 }
 
-.choix i, .choix_rose i {
-  padding: 0 15px 0 30px;
+.choix :hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #f2eafb;
 }
 
-.choix_rose {
-  background-color: #f2eafb;
+.choix i {
+  padding: 0 15px 0 30px;
 }
 
 .numero_cercle {
@@ -775,8 +777,8 @@ footer p {
   cursor: pointer;
   border-radius: 1rem;
   background-color: white;
-  -webkit-animation: slide-in 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-          animation: slide-in 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  -webkit-animation: slide-in 1000ms;
+          animation: slide-in 1000ms;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }

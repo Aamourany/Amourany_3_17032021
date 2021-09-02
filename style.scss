@@ -224,8 +224,8 @@ button {
     font-weight: 500;
     display: flex;
     position: relative;
+    cursor: pointer;
     border-radius: 1rem;
-    background-color: $background-color-primary;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
     width: 336px;
     height: 74px;
@@ -233,14 +233,15 @@ button {
     align-items:center;
     justify-content: flex-start;
     margin-bottom: 24px;
+    & :hover{
+        transform: scale(1.05);
+        background-color: lighten($color:$color-primary, $amount:35%);
+}
     & i {
         padding: 0 15px 0 30px;
     }
 }
-.choix_rose{
-    @extend .choix;
-    background-color: lighten($color:$color-primary, $amount:35%);
-}
+
 .numero_cercle{
     position: absolute;
     left: -14px;
@@ -480,7 +481,7 @@ max-height: 270px;
     cursor: pointer;
     border-radius: 1rem;
     background-color:white;
-    animation: slide-in 1000ms cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
+    animation: slide-in 1000ms;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
     &:hover{
         .valide{
