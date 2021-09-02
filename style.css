@@ -374,7 +374,7 @@ button:hover {
   margin-bottom: 24px;
 }
 
-.choix :hover {
+.choix:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #f2eafb;
@@ -454,9 +454,81 @@ button:hover {
           justify-content: flex-start;
 }
 
-@media all and (min-width: 650px) {
+@media all and (min-width: 1461px) {
+  .restaurants_bloc {
+    margin-left: 1%;
+  }
+}
+
+@media all and (max-width: 1460px) and (min-width: 1201px) {
+  .restaurants_bloc {
+    margin-left: 10%;
+  }
+}
+
+@media all and (max-width: 1200px) and (min-width: 1106px) {
+  .restaurants_bloc {
+    margin-left: 18%;
+  }
+}
+
+@media all and (max-width: 1105px) and (min-width: 950px) {
+  .restaurants_bloc {
+    margin-left: 12%;
+  }
+}
+
+@media all and (max-width: 949px) and (min-width: 831px) {
+  .restaurants_bloc {
+    margin-left: 10%;
+  }
+}
+
+@media all and (max-width: 830px) and (min-width: 790px) {
+  .restaurants_bloc {
+    margin-left: 5%;
+  }
+}
+
+@media all and (max-width: 789px) and (min-width: 759px) {
+  .restaurants_bloc {
+    margin-left: 1%;
+  }
+}
+
+@media all and (max-width: 758px) and (min-width: 752px) {
+  .restaurants_bloc {
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 751px) and (min-width: 627px) {
   .restaurants_bloc {
     margin-left: 20%;
+  }
+}
+
+@media all and (max-width: 626px) and (min-width: 580px) {
+  .restaurants_bloc {
+    margin-left: 18%;
+  }
+}
+
+@media all and (max-width: 579px) and (min-width: 530px) {
+  .restaurants_bloc {
+    margin-left: 15%;
+  }
+}
+
+@media all and (max-width: 529px) and (min-width: 470px) {
+  .restaurants_bloc {
+    margin-left: 10%;
+  }
+}
+
+@media all and (max-width: 469px) {
+  .restaurants_bloc {
+    margin-left: 5%;
   }
 }
 
@@ -557,22 +629,10 @@ footer p {
   cursor: pointer;
 }
 
-.footer_logo {
-  padding-bottom: 10px;
-  width: 100%;
-  max-width: 1400px;
-  color: white;
-}
-
-.footer_logo img {
-  width: 50%;
-}
-
 .footer_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   max-width: 1400px;
   line-height: 27px;
 }
@@ -621,9 +681,6 @@ footer p {
   }
   .menu {
     padding: 35px 20px;
-  }
-  .en_tete_menu h1 {
-    font-size: 1rem;
   }
 }
 
@@ -744,13 +801,14 @@ footer p {
   position: relative;
   top: 45px;
   overflow: hidden;
-  margin-bottom: 12px;
+  height: 6rem;
+  margin-bottom: 1rem;
   padding: 12px;
   cursor: pointer;
   border-radius: 1rem;
   background-color: white;
-  -webkit-animation: slide-in 1500ms;
-          animation: slide-in 1500ms;
+  -webkit-animation: slide-in 2000ms;
+          animation: slide-in 2000ms;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
