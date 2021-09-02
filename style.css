@@ -761,8 +761,8 @@ footer p {
   cursor: pointer;
   border-radius: 1rem;
   background-color: white;
-  -webkit-animation: slide-in 1000ms;
-          animation: slide-in 1000ms;
+  -webkit-animation: slide-in 1500ms;
+          animation: slide-in 1500ms;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
