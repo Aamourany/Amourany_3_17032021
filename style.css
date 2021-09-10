@@ -310,6 +310,10 @@ button:hover {
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+button:a {
+  color: #F6F6F6;
+}
+
 .fonctionnement {
   background-color: #F6F6F6;
   display: -webkit-box;
@@ -526,9 +530,15 @@ button:hover {
   }
 }
 
-@media all and (max-width: 469px) {
+@media all and (max-width: 469px) and (min-width: 376px) {
   .restaurants_bloc {
     margin-left: 5%;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .restaurants_bloc {
+    margin-left: 0;
   }
 }
 
@@ -634,7 +644,7 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   max-width: 1400px;
-  line-height: 27px;
+  line-height: 2rem;
 }
 
 .footer_menu i {

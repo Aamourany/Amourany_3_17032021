@@ -91,7 +91,7 @@ body{
     font-family:"Robot", sans-serif;
 }
 a{
-    color: black;
+ color:black ;
     text-decoration: none;
 }
 h1{
@@ -181,6 +181,9 @@ button {
     transform: scale(.97);
     font-size: 1rem;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    }
+    &:a{
+        color: $background-color-primary;
     }
 }
 .fonctionnement {
@@ -307,27 +310,32 @@ button {
     }
     @media all and (max-width:751px) and (min-width:627px){
         .restaurants_bloc{
-            margin-left:20%
+            margin-left:20%;
         }
     }
     @media all and (max-width:626px) and (min-width:580px){
         .restaurants_bloc{
-            margin-left:18%
+            margin-left:18%;
         }
     }
     @media all and (max-width:579px) and (min-width:530px){
         .restaurants_bloc{
-            margin-left:15%
+            margin-left:15%;
         }
     }
     @media all and (max-width:529px) and (min-width:470px){
         .restaurants_bloc{
-            margin-left:10%
+            margin-left:10%;
         }
     }
-    @media all and (max-width:469px){
+    @media all and (max-width:469px) and (min-width:376px){
         .restaurants_bloc{
-            margin-left:5%
+            margin-left:5%;
+        }
+    }
+    @media all and (max-width:375px){
+        .restaurants_bloc{
+            margin-left:0;
         }
     }
 .restaurant_cards{
@@ -393,7 +401,7 @@ footer{
 .footer_menu{
     display: flex;
     max-width:1400px;
-    line-height: 27px;
+    line-height: 2rem;
     & i{
         font-size: 1rem;
         margin-right: 10px;
