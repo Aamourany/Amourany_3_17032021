@@ -556,7 +556,7 @@ max-height: 270px;
                 height:3rem;
                 color:white;
                 border-radius:100%;
-                transition-duration:0.5s;
+                transition-duration:0.4s;
                 transform:rotate(360deg);
            
         }
@@ -629,7 +629,7 @@ footer{
     column-gap: 1rem;
 }
 }
-@media screen and (max-width:994px) and (min-width:450px){
+@media screen and (max-width:994px) and (min-width:600px){
     .menu_bloc{
         display: grid;
         grid-template-columns:repeat(2,1fr);
