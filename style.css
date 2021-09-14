@@ -310,8 +310,8 @@ button:hover {
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-button:a {
-  color: #F6F6F6;
+button a {
+  color: #F6F6F6 !important;
 }
 
 .fonctionnement {
@@ -637,6 +637,7 @@ footer a {
 
 footer p {
   cursor: pointer;
+  display: inline-block;
 }
 
 .footer_menu {
@@ -752,11 +753,11 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  right: 0;
 }
 
 .like_menu .empty_like {
   position: absolute;
+  right: 0;
   font-size: 1.4em;
   font-weight: normal;
   fill: transparent;
@@ -766,6 +767,7 @@ footer p {
 .like_menu .full_like {
   position: absolute;
   font-size: 1.4em;
+  right: 0;
   font-weight: bold;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -811,7 +813,6 @@ footer p {
   position: relative;
   top: 45px;
   overflow: hidden;
-  height: 6rem;
   margin-bottom: 1rem;
   padding: 12px;
   cursor: pointer;
@@ -918,34 +919,10 @@ footer p {
 .plats_lignes p {
   font-size: 1rem;
   font-weight: 300;
+  margin: 1.8rem 0 0 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  margin: 25px 1px 0 1px;
-}
-
-@media screen and (max-width: 461px) {
-  .plats_noms {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 460px) and (max-width: 634px) {
-  .plats_noms {
-    font-size: 1.1rem;
-  }
-  .plats_lignes p {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 635px) {
-  .plats_noms {
-    font-size: 1.7rem;
-  }
-  .plats_lignes p {
-    font-size: 1.5rem;
-  }
 }
 
 .prix {
@@ -984,5 +961,34 @@ footer p {
 
 footer img {
   width: 50%;
+}
+
+@media screen and (min-width: 995px) {
+  .menu_bloc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 994px) and (min-width: 450px) {
+  .menu_bloc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .btn_container {
+    margin: 30rem 0 0 0;
+  }
+}
+
+.plats_container {
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
