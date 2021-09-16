@@ -180,7 +180,8 @@ button {
     &:hover{
     transform: scale(.97);
     font-size: 1rem;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+    background: linear-gradient( #FF79DA 45%, #9356DC 85%);
     }
     & a{
         color: $background-color-primary !important;
@@ -506,7 +507,17 @@ max-height: 270px;
         }
     }
 }
+@media screen and(max-width:374px){
+    .like_menu {
+        .empty_like {
+            right: 1px;
+        }
 
+        .full_like{
+           position: inherit;
+        }
+    }  
+}
 .container{
     margin-bottom: 30px;
     & h1{
@@ -615,7 +626,7 @@ transition:all 1s;
 .btn_container{
     display: flex;
     justify-content: center;
-    margin:50px 0 0 0;
+    margin-bottom:10rem ;
 }
 footer{
     & img{
@@ -635,10 +646,7 @@ footer{
         grid-template-columns:repeat(2,1fr);
         column-gap: 1rem;
     }
-   
-    .btn_container{
-        margin: 30rem 0 0 0;
-    } }
+    }
 .plats_container{
     overflow: hidden;
 }    
