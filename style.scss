@@ -20,8 +20,8 @@ $color-third : #99E2D0;
     align-items: center;
 }
 @keyframes loading {
-    0% {opacity: 1;}
-    99%{opacity:1;}
+    0% {opacity:1;}
+    99%{opacity:0.5;}
     100%{ visibility: hidden;
         opacity:0;}
 }
@@ -32,7 +32,7 @@ $color-third : #99E2D0;
 @keyframes slide-in {
         0% {
             opacity: 0;
-            transform: translateY(10px);
+            transform: translateY(40px);
         }
         100% {
             opacity: 1;
@@ -49,7 +49,7 @@ $color-third : #99E2D0;
     min-height: 100%;
     margin:0;
     padding:0;
-    animation:loading 3.5s ease-in-out normal forwards ;
+    animation:loading 2.5s ease-in-out normal forwards ;
     opacity:1;
     background:#F6F6F6;
 & .logo_loader{
@@ -412,7 +412,7 @@ footer{
 @media all and (min-width:751px) {
     
 .footer_ligne{
-    padding:3rem;
+    padding:2rem;
     justify-content: space-between;
 }
 }
@@ -502,8 +502,7 @@ max-height: 270px;
         }
         .full_like {  
             transform: scale(1);
-            transition: transform 500ms ease-in-out;
-            transform-origin: bottom center;
+            transition: transform 250ms ease-in;
         }
     }
 }
@@ -540,7 +539,7 @@ max-height: 270px;
     cursor: pointer;
     border-radius: 1rem;
     background-color:white;
-    animation: slide-in 2000ms;
+    animation: slide-in 3000ms;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
     &:hover{
         .valide{
