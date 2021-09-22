@@ -898,6 +898,9 @@ footer p {
   font-weight: 600;
   line-height: 1.8rem;
   width: calc(100%);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .plat_valide {
@@ -970,8 +973,10 @@ footer p {
   margin-bottom: 10rem;
 }
 
-footer img {
-  width: 50%;
+.footer_titre {
+  color: #fff;
+  font-family: Shrikhand,"cursive";
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 995px) {
