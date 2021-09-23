@@ -891,6 +891,12 @@ footer p {
   margin-right: 6rem;
 }
 
+.plats:hover .plats_noms {
+  width: 70%;
+  -webkit-transition: width 500ms, text-overflow 500ms;
+  transition: width 500ms, text-overflow 500ms;
+}
+
 .plats_noms {
   font-size: 1.1rem;
   font-weight: 600;

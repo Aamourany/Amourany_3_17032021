@@ -573,6 +573,10 @@ max-height: 270px;
         .prix{
             margin-right:6rem;
         }
+        .plats_noms{
+            width: 70%;
+            transition: width 500ms, text-overflow 500ms;
+        }
     }
 }
 .plats_noms{
