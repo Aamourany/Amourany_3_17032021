@@ -491,10 +491,9 @@ max-height: 270px;
         right: 0;
         font-weight: bold;
         transform: scale(0);
-        background:linear-gradient(to bottom, $color-primary, $color-secondary);
-        background:-webkit-linear-gradient(to bottom, $color-primary, $color-secondary);
+        background:linear-gradient(to bottom, $color-primary 10%, $color-secondary 95%);
         -webkit-background-clip: text;
-        -webkit-text-all-color: transparent;
+        -webkit-text-fill-color: transparent;
     }
     &:hover {
         .empty_like {
