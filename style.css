@@ -738,6 +738,7 @@ footer p {
 }
 
 .en_tete_menu h1 {
+  font-family: Shrikhand,"cursive";
   font-weight: 900;
   margin: 0;
   text-align: left;
@@ -1007,9 +1008,5 @@ footer p {
 
 .plats_container {
   overflow: hidden;
-}
-
-.plats_container h2 {
-  font-family: Shrikhand,"cursive";
 }
 /*# sourceMappingURL=style.css.map */
