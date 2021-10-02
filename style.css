@@ -964,6 +964,7 @@ footer p {
 
 .plats_bloc {
   margin-bottom: 5rem;
+  margin-top: -2rem;
 }
 
 .btn_container {
@@ -1006,5 +1007,9 @@ footer p {
 
 .plats_container {
   overflow: hidden;
+}
+
+.plats_container h2 {
+  font-family: Shrikhand,"cursive";
 }
 /*# sourceMappingURL=style.css.map */
