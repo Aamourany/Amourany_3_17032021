@@ -835,10 +835,9 @@ footer p {
 }
 
 .line {
-  margin-left: 10px;
   width: 40px;
   height: 3px;
-  margin: 5px 0 12px 0;
+  margin: 0 2rem 0.5rem 0;
   background-color: #99E2D0;
 }
 
@@ -1032,5 +1031,9 @@ footer p {
 
 .plats_container {
   overflow: hidden;
+}
+
+.plats_container h2 {
+  margin-bottom: 3px;
 }
 /*# sourceMappingURL=style.css.map */
